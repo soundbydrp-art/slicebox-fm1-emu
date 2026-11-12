@@ -1,0 +1,36 @@
+SLICEBOX for the FM-1: browser emulator (unreleased test build 0.1-dev)
+
+This folder is the real firmware compiled for the browser, on a picture of the FM-1's panel.
+Nothing here touches your FM-1.
+
+HOW TO OPEN IT
+Browsers won't run it straight from a double-clicked file, so it needs to be served:
+
+  Easiest, works on PC, Mac and iPad: GitHub Pages
+    1. Make a new GitHub repository (e.g. slicebox-fm1-emu).
+    2. Upload everything in this folder (keep the parts/ and web/ folders).
+    3. Settings > Pages > Deploy from branch > main / root. Open the link it gives you.
+
+  On the Mac (Python is built in):
+    Open Terminal, type   cd   and a space, drag this folder into the window, press Return, then:
+      python3 -m http.server 8000
+    and open http://localhost:8000 in Chrome.
+
+Press the big start button, then click the panel or use the keyboard shortcuts.
+The first start builds the demo kit (a few seconds); after that it is remembered in this browser.
+"Factory reset" under the panel wipes it and builds it again.
+
+WHAT TO TRY
+  SELECT knob ........ turns through WAVE, CHOP, SLICE, ENV, SEQ, FX
+  HOME/SEL/EDIT/ENV/SEQ/FX buttons jump straight to those pages
+  KNOB1-4 ............ the four controls shown along the bottom of the screen
+  ALGORITHM .......... picks the slice     PRESETS ...... tempo
+  White keys ......... the 16 slices (on SEQ they toggle the 16 steps in view)
+  PLAY ............... the pattern (it starts as the break played back as it was)
+  REC ................ record what you play into the pattern, quantised
+  ARP ................ every key plays the selected slice chromatically
+  GLO (on SEQ) ....... clears the selected slice's lane
+  OCT-/OCT+ .......... the 16-step page on SEQ; undo a mark in LAZY chop
+  CHOP > LAZY ........ press a key to start the roll, each next key drops a slice there
+  CHOP > KNOB4 ....... rewrites the pattern so the slices play back as the original
+  SAVE ............... keeps slices, sounds and pattern (lit when there are changes)
